@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "ScrollMe CV Deadline Status",
+    "version": "1.0",
+    "description": "A Chrome extension to remove Company opening with expired date on the college ERP website.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://*/*",
+        "http://*/*"
+    ],
+    "action": {
+        "default_title": "ScrollMe CV Deadline Status"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
